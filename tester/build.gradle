@@ -8,10 +8,10 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-ext { javaMainClass = "com.nexgo.cloud.demo_gui.DemoMain" }
+ext { javaMainClass = "com.nexgo.cloud.tester.Tester" }
 application { mainClassName = javaMainClass }
 
 //noinspection ConfigurationAvoidance
 task runWithExec(type: Exec) {
-    commandLine "java", "--enable-preview", "-classpath", "tester-0.24.zip;libs/*", javaMainClass
+    commandLine "java", "--enable-preview", "-classpath", "tester-0.32-alpha2.zip;libs/*", javaMainClass
 }
